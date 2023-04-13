@@ -11,16 +11,16 @@ $data = array();
 if($received_data->query != '')
 {
 	$query = "
-	SELECT * FROM fatec_alunos 
+	SELECT * FROM fatec_professores 
 	WHERE first_name LIKE '%".$received_data->query."%' 
-	OR last_name LIKE '%".$received_data->query."%' 
+	OR endereco LIKE '%".$received_data->query."%' 
 	ORDER BY id DESC
 	";
 }
 else
 {
 	$query = "
-	SELECT * FROM fatec_alunos 
+	SELECT * FROM fatec_professores 
 	ORDER BY id DESC
 	";
 }
